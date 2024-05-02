@@ -1,3 +1,4 @@
+import { expect } from "@playwright/test";
 import ContactLocator from "../locators/contact.locator";
 
 const contactLocator = new ContactLocator();
@@ -33,6 +34,10 @@ class ContactPage {
 
     async cancelForm() {
         await this.page.click(contactLocator.CancelBtn);
+    }
+
+    async verifyContactPageIsOpen() {
+        await expect(this.page).toHaveURL('/contactList');
     }
 }
 

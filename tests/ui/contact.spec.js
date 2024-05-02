@@ -3,7 +3,7 @@ import LoginPage from "../../pages/login.page";
 import ContactPage from "../../pages/contact.page";
 
 
-test.describe('Go to Contact Page and add new contact',() => {
+test.describe.parallel('Go to Contact Page and add new contact',() => {
 
     test('Adding new contact', async({page})=>{
         let email = "fatima.atlant@gmail.com"

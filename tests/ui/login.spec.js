@@ -5,7 +5,7 @@ import ContactPage from "../../pages/contact.page";
 
 test.describe('Go to Login Page and try to sign in',() => {
 
-    test('Sign in with valid data', async({page})=>{
+    test('Sign in with valid data',{tag: '@smoke'}, async({page})=>{
         let email = "fatima.atlant@gmail.com"
         let password = "Atlant123"
 
